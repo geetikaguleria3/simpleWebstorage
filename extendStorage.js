@@ -10,7 +10,7 @@ Got it?
   Storage.prototype.set = function(key, obj) {
     var t = typeof obj;
     if (t==='undefined' || obj===null ) this.removeItem(key);
-    this.setItem(key, (t==='object')?JSON.stringify(obj):obj);
+    else this.setItem(key, (t==='object')?JSON.stringify(obj):obj);
     return obj;
   };
   Storage.prototype.get = function(key) {
